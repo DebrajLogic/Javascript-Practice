@@ -1,0 +1,18 @@
+#display{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clock{
+    display: flex;
+    justify-content: center;
+    background-color: #f2a33c;
+    padding: 20px 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 40px;
+    color: #fef1e2;
+}
