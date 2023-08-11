@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body style="background-color: #313131; color: white">
+    <h1>Amazing Images</h1>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="venice"
+            src="https://images.pexels.com/photos/1144265/pexels-photo-1144265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="lake"
+            src="https://images.pexels.com/photos/1144241/pexels-photo-1144241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </li>
+
+        <li>
+          <img
+            width="200px"
+            id="house"
+            src="https://images.pexels.com/photos/1114637/pexels-photo-1114637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </li>
+
+        <li>
+          <img
+            width="200px"
+            id="city"
+            src="https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="nature"
+            src="https://images.pexels.com/photos/2519813/pexels-photo-2519813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("clicked on list");
+    //   },
+    //   false
+    // );
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        const image = e.target.parentNode;
+        image.remove();
+        console.log(`${e.target.id} removed`);
+      }
+    });
+  </script>
+</html>
