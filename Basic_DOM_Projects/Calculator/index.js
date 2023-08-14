@@ -10,9 +10,17 @@ array = [];
 
 let operator = '';
 
+let buttonID;
+
 input.forEach((button)=>{
     clearFlag = true
     button.addEventListener('click', ()=>{
+        if(button.parentElement.id === 'operator'){
+            button.className = 'pressed';
+            buttonID = button;
+            // console.log('buttonid:', button.id);
+        }
+        
         let value = button.innerHTML;
         // console.log(value);
          if(clearFlag){
@@ -28,13 +36,17 @@ input.forEach((button)=>{
 })
 
 clearValue.addEventListener('click',()=>{
+    buttonID.className = 'input-btn';
     clear();
 })
 
 
 output.addEventListener('click', (e)=>{
+    buttonID.className = 'input-btn';
+    // console.log('buttonId', buttonID.className);
     result();  
 })
+
 
 function setOperator(value){
     switch(value){
