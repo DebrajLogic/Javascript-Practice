@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="main-heading">
+      <h1 id="heading">Attendance Calculator</h1>
+    </div>
+    <section id="main-section">
+      <div id="left-section">
+        <div id="form-section">
+          <form>
+            <div class="form-input">
+              <label for="classes-attended">Classes Attended:</label>
+              <input id="classes-attended" type="number" value="27"/>
+            </div>
+            <div class="form-input">
+              <label for="total-classes">Total Classes:</label>
+              <input id="total-classes" type="number" value="30"/>
+            </div>
+
+            <div class="form-input">
+              <label for="minimum-attendance">Minimum Attendance:</label>
+              <input id="minimum-attendance" type="number" value="75" />
+            </div>
+            <div id="submit-btn">
+              <input id="submit" type="submit" />
+            </div>
+          </form>
+        </div>
+        <div id="status-box">
+          <div id="status">
+            <h2>Current Attendance:</h2>
+            <div id="attendance"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-section"></div>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>
