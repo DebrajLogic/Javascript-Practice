@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div style="height: 400px; width: 250px" id="calculator">
+      <div id="display">0</div>
+      <div id="input">
+        <div id="values">
+          <div class="value-stack" id="value1">
+            <button class="input-btn" id="1">1</button>
+            <button class="input-btn" id="2">2</button>
+            <button class="input-btn" id="3">3</button>
+          </div>
+          <div class="value-stack" id="value2">
+            <button class="input-btn" id="4">4</button>
+            <button class="input-btn" id="5">5</button>
+            <button class="input-btn" id="6">6</button>
+          </div>
+          <div class="value-stack" id="value3">
+            <button class="input-btn" id="7">7</button>
+            <button class="input-btn" id="8">8</button>
+            <button class="input-btn" id="9">9</button>
+          </div>
+          <div class="value-stack" id="value4">
+            <button class="input-btn" id="CE">CE</button>
+            <button class="input-btn" id="0">0</button>
+          </div>
+        </div>
+        <div id="operator">
+          <button class="input-btn" id="+">+</button>
+          <button class="input-btn" id="-">-</button>
+          <button class="input-btn" id="*">*</button>
+          <button class="input-btn" id="/">/</button>
+        </div>
+      </div>
+
+      <button id="calculate"><div>Calculate</div></button>
+    </div>
+  </body>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(38, 46, 42);
+    }
+
+    div {
+      padding: 10px;
+
+      border-radius: 10px;
+      /* border: 1px solid white; */
+    }
+
+    #calculator {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid white;
+      background-color: rgb(59, 57, 63);
+    }
+
+    #display {
+      border: 1px solid white;
+      height: 50px;
+      background-color: white;
+      color: black;
+    }
+
+    #input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #operator {
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .input-btn {
+      padding: 10px;
+      margin-right: 5px;
+      height: 40px;
+      width: 40px;
+      background-color: rgb(242, 163, 60);
+      color: white;
+      font-size: 20px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .value-stack {
+      display: flex;
+      justify-content: center;
+    }
+
+    #calculate {
+      background-color: rgb(100, 100, 100);
+      color: white;
+      font-size: 20px;
+    }
+
+    #CE {
+      background-color: rgb(100, 200, 100);
+    }
+  </style>
+  <script src="index.js"></script>
+</html>
