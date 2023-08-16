@@ -17,11 +17,11 @@
           <form>
             <div class="form-input">
               <label for="classes-attended">Classes Attended:</label>
-              <input id="classes-attended" type="number" value="27"/>
+              <input id="classes-attended" type="number" value="27" />
             </div>
             <div class="form-input">
               <label for="total-classes">Total Classes:</label>
-              <input id="total-classes" type="number" value="30"/>
+              <input id="total-classes" type="number" value="30" />
             </div>
 
             <div class="form-input">
@@ -40,7 +40,18 @@
           </div>
         </div>
       </div>
-      <div id="right-section"></div>
+      <div id="right-section">
+        <div id="class-list-heading">
+          <h1>You can bunk/Attend: <span id="attend-drop"></span></h1>
+        </div>
+        <div id="class-list">
+          <ul>
+            <!-- <li class="class_list">
+              <div>Class 1 <span id="class-percentage">85%</span></div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
     </section>
   </body>
   <script src="index.js"></script>
