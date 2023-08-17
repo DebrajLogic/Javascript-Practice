@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Lights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: black">
+    <div class="neon_light" id="light1">Pink Neon Light</div>
+    <div class="neon_light" id="light2">Blue Neon Light</div>
+  </body>
+
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-family: "Dancing Script", cursive;
+      font-size: 30px;
+    }
+
+    .neon_light {
+      width: 300px;
+      padding: 50px;
+      margin: 100px;
+      border: 1px solid white;
+      background: transparent;
+      color: white;
+      text-align: center;
+    }
+
+    #light1 {
+      box-shadow: inset 0px 0px 40px 10px rgb(246, 3, 246),
+        0px 0px 40px 10px rgb(246, 3, 246);
+    }
+
+    #light2 {
+      box-shadow: inset 0px 0px 40px 10px rgb(0, 166, 249),
+        0px 0px 40px 10px rgb(0, 166, 249);
+    }
+  </style>
+</html>
