@@ -98,14 +98,14 @@ function climbAttendance(A= 5, T = 20, safeZone= 75){
 
     let i = 1;
     let result;
-    let count = 1;
+   
 
     while(true){
         result = percetange(A++, T++);
 
-        if(result >= safeZone){
-            break;
-        }
+        // if(result >= safeZone){
+        //     break;
+        // }
 
         // if(i > 10){
         //     console.log('NGMI');
@@ -117,6 +117,11 @@ function climbAttendance(A= 5, T = 20, safeZone= 75){
         console.log(`Class #${i}: Attendance: ${result}`);
 
         i++;
+
+        if(result >= safeZone){
+            break;
+        }
+
     }
     if(i-1 === 1){
         classListHeading.innerHTML = `<h1>You need to ATTEND: <span id="attend-drop">${i - 1}</span> Class</h1>`
@@ -124,7 +129,7 @@ function climbAttendance(A= 5, T = 20, safeZone= 75){
     else{
         classListHeading.innerHTML = `<h1>You need to ATTEND: <span id="attend-drop">${i - 1}</span> Classes</h1>`
     }
-    if(i - 1 === 10){
+    if(i - 1 >= 10){
         generateAlert();
     }
      
