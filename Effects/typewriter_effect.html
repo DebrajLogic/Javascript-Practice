@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Effect</title>
+  </head>
+  <body>
+    <div class="typewriter">
+      <span id="text"></span>
+      <span class="cursor">|</span>
+    </div>
+  </body>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .typewriter {
+      font-size: 50px;
+    }
+
+    .cursor {
+      animation: blink 0.5s infinite;
+    }
+
+    @keyframes blink {
+      0%,
+      49% {
+        opacity: 1;
+      }
+      50%,
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <script>
+    function typewriterEffect(
+      elementId,
+      textToType,
+      typingSpeed = 100,
+      pauseDuration = 1000
+    ) {
+      const textElement = document.getElementById(elementId);
+      let flag = false;
+      let index = 0;
+
+      function typeText() {
+        if (!flag && index < textToType.length) {
+          textElement.textContent += textToType.charAt(index);
+          index++;
+        } else if (flag && index > 0) {
+          textElement.textContent = textElement.textContent.slice(0, -1);
+          index--;
+        }
+
+        if (index === textToType.length && !flag) {
+          setTimeout(() => {
+            flag = true;
+            typeText();
+          }, pauseDuration);
+        } else if (index === 0 && flag) {
+          flag = false;
+          setTimeout(typeText, pauseDuration); // Pause before retyping
+        } else {
+          setTimeout(typeText, typingSpeed);
+        }
+      }
+
+      typeText();
+    }
+
+    // Usage:
+    typewriterEffect("text", "This is a Typewriter Effect");
+  </script>
+</html>
