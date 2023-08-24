@@ -2,7 +2,7 @@
 
 ## Challeges / Learnings
 
-- Event Bubbling
+**Event Bubbling**
 
 - I used this function to detect the clicks from the user and then sore it in the userInputs array.
 
