@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(TodoList-Background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+body h1{
+    width: 97%;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+h2{
+    width: 97%;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#main-container{
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 30px ;
+    height: 150px;
+    width: 600px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#input-container{
+    margin-top: 20px;
+}
+
+#todo-input{
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 11px 17px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    height: 20px;
+    width: 300px;
+    outline: none;
+}
+
+#add-btn{
+    margin-left: 20px;
+    background-color: #b4bf33;
+}
+
+#delete-btn{
+    margin-left: 10px;
+    background-color: #d2b29b;
+}
+
+.list-complete-btn{
+    margin-left: 20px;
+    background-color: #b4bf33;
+    padding-top: 2px;
+    font-size: 15px;
+}
+
+.list-delete-btn{
+    margin-left: 5px;
+    background-color: #d2b29b;
+    padding-top: 2px;
+    font-size: 15px;
+}
+
+button{
+    font-size: 20px;
+    padding: 5px 10px;
+   border-radius: 10px;
+   color: whitesmoke
+}
+
+#output-container{
+    margin-top: 20px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+#list-container{
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+ul li{
+   
+    margin: 12px 0px;
+    list-style: none;
+    background-color: beige;
+    border-radius: 20px;
+    width: 400px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: #edebeede;
+    color: #66605d;
+    display: flex;
+    justify-content: space-between;
+}
